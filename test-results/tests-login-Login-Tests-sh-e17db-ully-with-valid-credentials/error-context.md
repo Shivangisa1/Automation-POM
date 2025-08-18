@@ -1,0 +1,205 @@
+# Page snapshot
+
+```yaml
+- paragraph:
+  - link "TestifyStack":
+    - /url: https://testifystack.com/
+  - text: "| Email, SMS, OTP and Webhooks Testing Stack for QA & Dev"
+  - link "Software testing consultancy":
+    - img
+    - text: Software testing consultancy
+- banner:
+  - navigation "Main navigation":
+    - link "SUT":
+      - /url: /
+      - 'img "Best Website for Practice Automation Testing: Free UI and REST API Examples and Apps. Using Cypress, Playwright, Selenium, WebdriverIO and Postman."'
+      - text: Practice
+    - list:
+      - listitem:
+        - button "Demos"
+      - listitem:
+        - link "Tools":
+          - /url: /#tools
+      - listitem:
+        - link "Tips":
+          - /url: /tips
+      - listitem:
+        - link "Test Cases":
+          - /url: /test-cases
+      - listitem:
+        - link "API Testing":
+          - /url: /notes/api/api-docs/
+      - listitem:
+        - link "About":
+          - /url: /about
+    - list
+    - link "Free ISTQB Mock Exams":
+      - /url: https://istqb.expandtesting.com/
+- main:
+  - paragraph:
+    - text: Do you enjoy this platform? ❤️
+    - link "Buy us a coffee":
+      - /url: https://www.buymeacoffee.com/expandtesting
+  - navigation "breadcrumb mb-2":
+    - list:
+      - listitem:
+        - link "Home":
+          - /url: /
+      - listitem: / Login Page
+  - heading "Test Login page for Automation Testing Practice" [level=1]
+  - paragraph:
+    - text: This Test Login page is designed for automation testing practice. Test various positive and negative login scenarios in a testing environment.
+    - link "Free UI testing":
+      - img
+      - text: Free UI testing
+    - link "Software testing consultancy":
+      - img
+      - text: Software testing consultancy
+  - paragraph: You can use this login page for practicing with Selenium or other tools like Playwright, Cypress, etc.
+  - paragraph:
+    - text: Register
+    - link "here":
+      - /url: /register
+    - text: "or Log in to the secure area with these credentials:"
+  - list:
+    - listitem: "Username: practice"
+    - listitem: "Password: SuperSecretPassword!"
+  - paragraph
+  - text: Username
+  - textbox "Username": practice
+  - text: Password
+  - textbox "Password": SuperSecretPassword!
+  - button "Login"
+  - link "Selenium testing courses":
+    - img
+    - text: Selenium testing courses
+  - heading "How to test the login page?" [level=2]
+  - paragraph: If the credentials are correct, you should see a welcome message; otherwise, you will see an error message.
+  - paragraph: The login feature is essential for secure websites and is commonly used. Automating the testing of various login scenarios, including different edge cases, is crucial to ensure reliability and security.
+  - heading "How Does Form-Based Authentication Work?" [level=3]
+  - paragraph: "Take a look at this diagram and review the different steps:"
+  - img "How Does Form-Based Authentication Work"
+  - list:
+    - listitem: "Step 1: A client requests access to a protected resource"
+    - listitem: "Step 2: If the client is unauthenticated, the server redirects the client to a login page"
+    - listitem: "Step 3: The client submits the login form to the server"
+    - listitem: "Step 4: If the login succeeds, the server redirects the client to the resource. If the login fails, the client is redirected to an error page"
+    - link "Software testing consultancy":
+      - img
+      - text: Software testing consultancy
+    - link "Automation testing tools":
+      - img
+      - text: Automation testing tools
+  - heading "Login Automation Test Cases" [level=2]
+  - paragraph: Below are the test cases for the login page. These test cases cover both positive and negative scenarios to ensure comprehensive testing of the login functionality.
+  - paragraph:
+    - text: To perform these tests, please navigate to this
+    - link "page":
+      - /url: /login
+  - heading "Login Automation Test Cases" [level=2]
+  - 'heading "Test Case 1: Successful Login" [level=3]'
+  - list:
+    - listitem: Launch the browser.
+    - listitem:
+      - text: Navigate to the
+      - link "login":
+        - /url: /login
+      - text: page URL.
+    - listitem: Verify that the login page is displayed successfully.
+    - listitem:
+      - text: Enter
+      - strong: Username
+      - text: ":"
+      - code: practice
+      - text: .
+    - listitem:
+      - text: Enter
+      - strong: Password
+      - text: ":"
+      - code: SuperSecretPassword!
+      - text: .
+    - listitem:
+      - text: Click the
+      - strong: Login
+      - text: button.
+    - listitem:
+      - text: Verify that the user is redirected to the
+      - code: /secure
+      - text: page.
+    - listitem: Confirm the success message "You logged into a secure area!" is visible.
+    - listitem:
+      - text: Verify that a
+      - strong: Logout
+      - text: button is displayed.
+    - link "Free UI testing":
+      - img
+      - text: Free UI testing
+    - link "Software testing consultancy":
+      - img
+      - text: Software testing consultancy
+  - separator
+  - 'heading "Test Case 2: Invalid Username" [level=3]'
+  - list:
+    - listitem: Launch the browser.
+    - listitem: Navigate to the login page URL.
+    - listitem: Verify that the login page is displayed successfully.
+    - listitem:
+      - text: Enter an incorrect
+      - strong: Username
+      - text: (e.g.,
+      - code: wrongUser
+      - text: ).
+    - listitem:
+      - text: Enter
+      - strong: Password
+      - text: ":"
+      - code: SuperSecretPassword!
+      - text: .
+    - listitem:
+      - text: Click the
+      - strong: Login
+      - text: button.
+    - listitem: Verify that an error message "Invalid username." is displayed.
+    - listitem: Ensure the user remains on the login page.
+  - separator:
+    - link "Software testing consultancy":
+      - img
+      - text: Software testing consultancy
+  - 'heading "Test Case 3: Invalid Password" [level=3]'
+  - list:
+    - listitem: Launch the browser.
+    - listitem: Navigate to the login page URL.
+    - listitem: Verify that the login page is displayed successfully.
+    - listitem:
+      - text: Enter
+      - strong: Username
+      - text: ":"
+      - code: practice
+      - text: .
+    - listitem:
+      - text: Enter an incorrect
+      - strong: Password
+      - text: (e.g.,
+      - code: WrongPassword
+      - text: ).
+    - listitem:
+      - text: Click the
+      - strong: Login
+      - text: button.
+    - listitem: Verify that an error message "Invalid password." is displayed.
+    - listitem: Ensure the user remains on the login page.
+  - link "Software testing consultancy":
+    - img
+    - text: Software testing consultancy
+- contentinfo:
+  - heading "Practice Test Automation WebSite for Web UI and Rest API" [level=4]
+  - paragraph:
+    - text: "Version: a9acc86c | Copyright"
+    - link "Expand Testing":
+      - /url: https://expandtesting.com/
+    - text: "2025"
+- img
+- img
+- link "Go to shopping options for Testing Automation Platform": Testing Automation Platform
+- button "Close shopping anchor"
+```
