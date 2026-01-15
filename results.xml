@@ -1,0 +1,14 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="14.412601">
+<testsuite name="Buttonclicks.test.ts" timestamp="2025-12-11T12:58:39.982Z" hostname="" tests="1" failures="0" skipped="0" time="12.573" errors="0">
+<testcase name="Validate all buttons clickability" classname="Buttonclicks.test.ts" time="12.573">
+<system-out>
+<![CDATA[total number of icons in a request are : [33m28[39m
+
+[[ATTACHMENT|test-results\Buttonclicks-Validate-all-buttons-clickability\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\Buttonclicks-Validate-all-buttons-clickability\video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
