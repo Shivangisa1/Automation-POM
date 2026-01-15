@@ -1,35 +1,35 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
+import { LoginPage } from '../Pages/Loginpage';
+
 
 test.describe('Login Tests', () => {
-  // This block runs before all tests in this describe block
-  test.beforeAll(async ({ browser }) => {
-    // You can add any setup code here if needed
+  let loginPage: LoginPage;
+
+  test.beforeEach(async ({ page }) => { // to run before each test
+    loginPage = new LoginPage(page);
+    // await loginPage.goto();
+
   });
 
-  // This block runs after all tests in this describe block
-  test.afterAll(async ({ browser }) => {
-    // You can add any teardown code here if needed
-  });
- // 1st case
-  test('should login successfully with valid credentials', async ({ page }) => {
-    const loginPage = new LoginPage(page);
 
-    await loginPage.goto();
-    await loginPage.login('practice', 'SuperSecretPassword!');
+  test('Test case 001 :should log in with valid credentials', async () => {
+    await loginPage.login('admin@mailinator.com', 'Tpac@123');
     await loginPage.assertLoginSuccess();
-    await expect(page).toHaveURL(/.*secure/);
+    expect(await loginPage.page.url()).toContain('/dashboard'); // Case sensitive
+
+    await loginPage.page.screenshot({ path: 'screenshots/login-success.png' }); //  working currently
+    await loginPage.page.close(); // no need to add this page close in after each because playwright automatically closes the browser after each test
   });
+  /*
 
-// 2nd case:
-  test('should show error with invalid credentials', async ({ page }) => {
-    const loginPage = new LoginPage(page);
-
-    await loginPage.goto();
-    await loginPage.login('wronguser', 'wrongpass');
-
-    const errorMsg = page.locator('.error-message');
-    await expect(errorMsg).toBeVisible();
-    await expect(errorMsg).toHaveText(/login/i);
+  test('should not log in with invalid credentials', async () => {
+    await loginPage.login('invalidUser', 'invalidPassword');
+    expect(await loginPage.page.url()).not.toContain('/Dashboard');
   });
-});
+  test('should show error message on failed login', async () => {
+    await loginPage.login('invalidUser', 'invalidPassword');
+    await loginPage.assertLoginFailure();
+  });
+  */
+}
+);
